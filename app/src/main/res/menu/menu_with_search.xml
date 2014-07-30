@@ -1,0 +1,29 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" >
+
+    <item
+        android:id="@+id/action_search"
+        android:actionViewClass="android.widget.SearchView"
+        android:icon="@drawable/ic_action_search"
+        android:showAsAction="always"
+        android:title="@string/str_search"
+        />
+    <item
+        android:id="@+id/setgs"
+        android:showAsAction="never"
+        android:title="@string/str_settings"/>
+    <item
+        android:id="@+id/upd"
+        android:showAsAction="never"
+        android:title="@string/str_check_update"/>
+    <item
+        android:id="@+id/abt"
+        android:showAsAction="never"
+        android:title="@string/str_about"/>
+    <item
+        android:id="@+id/lgt"
+        android:showAsAction="never"
+        android:title="@string/str_logout"/>
+
+</menu>

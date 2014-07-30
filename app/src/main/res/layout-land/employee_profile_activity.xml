@@ -1,0 +1,352 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <!--Left part-->
+    <RelativeLayout
+        android:id="@+id/leftPart"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/background_with_shadow"
+        >
+
+        <ImageView
+            android:id="@+id/ivEmployeeImage"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="2dp"
+            />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="@dimen/progress_bar_width"
+            android:layout_height="@dimen/progress_bar_height"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+
+    </RelativeLayout>
+
+    <!--Right part-->
+    <LinearLayout
+        android:id="@+id/rightPart"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_toRightOf="@+id/leftPart"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/background_with_shadow"
+        >
+
+        <!-- <name row>   -->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="25dp">
+            <!--field-->
+            <LinearLayout
+                android:layout_width="220dp"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:layout_marginLeft="25dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    style="@style/EmployeeProfileLandFields"
+                    android:text="Name" />
+
+            </LinearLayout>
+
+            <!--data-->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvEmployeeName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:layout_marginTop="5dp"
+                    android:text="NTWARI SHYAKA AIME" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- </name row>   -->
+
+        <!-- <department row>   -->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp">
+            <!--field-->
+            <LinearLayout
+                android:layout_width="220dp"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:layout_marginLeft="25dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    style="@style/EmployeeProfileLandFields"
+                    android:text="Department" />
+
+            </LinearLayout>
+
+            <!--data-->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvEmployeeDepartment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:layout_marginTop="5dp"
+                    android:text="Marketing" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- </department row>   -->
+
+        <!-- <role row>   -->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp">
+            <!--field-->
+            <LinearLayout
+                android:layout_width="220dp"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:layout_marginLeft="25dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    style="@style/EmployeeProfileLandFields"
+                    android:text="Role" />
+
+            </LinearLayout>
+
+            <!--data-->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvEmployeeRole"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:layout_marginTop="5dp"
+                    android:text="Manager" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- </role row>   -->
+
+        <!-- <email row>   -->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp">
+            <!--field-->
+            <LinearLayout
+                android:layout_width="220dp"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:layout_marginLeft="25dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    style="@style/EmployeeProfileLandFields"
+                    android:text="Email" />
+
+            </LinearLayout>
+
+            <!--data-->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvEmployeeEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:layout_marginTop="5dp"
+                    android:text="ntwarishyakaime@gmail.com" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- </email row>   -->
+
+        <!-- <phone row>   -->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp">
+            <!--field-->
+            <LinearLayout
+                android:layout_width="220dp"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:layout_marginLeft="25dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    style="@style/EmployeeProfileLandFields"
+                    android:text="Phone number" />
+
+            </LinearLayout>
+
+            <!--data-->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvEmployeePhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:layout_marginTop="5dp"
+                    android:text="0788233456" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- </phone row>   -->
+
+
+        <!-- <number assigned row>   -->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp">
+            <!--field-->
+            <LinearLayout
+                android:layout_width="220dp"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:layout_marginLeft="25dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    style="@style/EmployeeProfileLandFields"
+                    android:text="Number assigned" />
+
+            </LinearLayout>
+
+            <!--data-->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvEmployeeNumberAssigned"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:layout_marginTop="5dp"
+                    android:text="009" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!-- </number assigned row>   -->
+
+        <!-- <edit number assigned row>   -->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp">
+            <!--field-->
+            <LinearLayout
+                android:layout_width="220dp"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:layout_marginLeft="25dp">
+
+
+            </LinearLayout>
+
+            <!--data-->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/bEditAssignedNumber"
+                    android:layout_width="230dp"
+                    android:layout_height="50dp"
+                    style="@style/EmployeeProfileLandFields"
+                    android:text="Edit Assigned Number"
+                    android:layout_marginRight="0dp"
+                    android:background="@drawable/radio_states_yellow" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!-- </edit assigned number row>   -->
+
+
+    </LinearLayout>
+
+</RelativeLayout>

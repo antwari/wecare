@@ -1,0 +1,125 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/tvEnglishTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="240dp"
+        android:text="@string/vote_for_service_received"
+        android:textColor="#000"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/tvKinyarwandaTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvEnglishTitle"
+        android:text="@string/tanga_amanota_kuri_service"
+        android:layout_centerHorizontal="true"
+        android:textColor="#000"
+        android:textSize="27sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvKinyarwandaTitle"
+        android:background="#fff"
+        android:orientation="horizontal"
+        android:layout_marginTop="110dp"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:id="@+id/llPoor"
+            android:layout_width="@dimen/business_rank_portrait_width"
+            android:layout_height="@dimen/business_rank_portrait_height"
+            android:orientation="vertical"
+            android:background="@drawable/bg_poor">
+
+            <TextView
+                android:id="@+id/tvPoor"
+                style="@style/ButtonText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/poor_rank_text"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/business_rank_portrait_first_text_margin_top" />
+
+            <TextView
+                android:id="@+id/tvNimbi"
+                style="@style/ButtonText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ni_mbi"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/business_rank_portrait_second_text_margin_top" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llAverage"
+            android:layout_width="@dimen/business_rank_portrait_width"
+            android:layout_height="@dimen/business_rank_portrait_height"
+            android:orientation="vertical"
+            android:background="@drawable/bg_average"
+            android:layout_marginRight="55dp"
+            android:layout_marginLeft="55dp">
+
+            <TextView
+                android:id="@+id/tvAverage"
+                style="@style/ButtonText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/average_rank_text"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/business_rank_portrait_first_text_margin_top" />
+
+            <TextView
+                android:id="@+id/tvIragerageza"
+                style="@style/ButtonText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/iragerageza"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/business_rank_portrait_second_text_margin_top" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llGood"
+            android:layout_width="@dimen/business_rank_portrait_width"
+            android:layout_height="@dimen/business_rank_portrait_height"
+            android:orientation="vertical"
+            android:background="@drawable/bg_good">
+
+            <TextView
+                android:id="@+id/tvExcellent"
+                style="@style/ButtonText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/good_rank_text"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/business_rank_portrait_first_text_margin_top" />
+
+            <TextView
+                android:id="@+id/tvNziza"
+                style="@style/ButtonText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nziza"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/business_rank_portrait_second_text_margin_top" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

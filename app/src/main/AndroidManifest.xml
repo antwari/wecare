@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.app.wecare">
+
+    <uses-sdk
+        android:minSdkVersion="13"
+        android:targetSdkVersion="19" />
+
+
+    <application
+        android:name=".util.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+
+        <activity
+            android:name=".activity.LoginActivity"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.SectionListActivity"
+            android:label="@string/menu"
+            android:theme="@style/MyTheme" />
+
+        <activity
+            android:name=".activity.DepartmentListActivity"
+            android:label="@string/department"
+            android:theme="@style/MyTheme"
+            android:parentActivityName=".activity.SectionListActivity" />
+
+        <activity
+            android:name=".activity.EmployeesGridActivity"
+            android:label="@string/employees"
+            android:theme="@style/MyTheme"
+            android:parentActivityName=".activity.DepartmentListActivity">
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+        </activity>
+
+
+        <activity
+            android:name=".activity.EmployeeRankActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:parentActivityName=".activity.DepartmentListActivity" />
+
+        <activity
+            android:name=".activity.BusinessRankActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:parentActivityName=".activity.DepartmentListActivity" />
+
+
+
+
+        <activity
+            android:name=".activity.EmployeeProfileActivity"
+            android:label="@string/profile"
+            android:theme="@style/MyTheme"
+            android:parentActivityName=".activity.EmployeesGridActivity" />
+
+
+        <activity
+            android:name=".activity.CommentActivity"
+            android:label="@string/profile"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:parentActivityName=".activity.EmployeesGridActivity" />
+
+
+
+    </application>
+
+    <!-- Permission - Internet Connect -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Network State Permissions -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+</manifest>
