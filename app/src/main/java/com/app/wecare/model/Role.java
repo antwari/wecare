@@ -1,11 +1,5 @@
 package com.app.wecare.model;
 
-/*
- * Role Class
- * ----------------
- * This class is used to create the Role object
- * The role maybe the Manager , the Chief and so on
- */
 
 public class Role {
 

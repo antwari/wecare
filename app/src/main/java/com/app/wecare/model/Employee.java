@@ -1,10 +1,5 @@
 package com.app.wecare.model;
 
-/*
- * Employee Class
- * ----------------
- * This class is used to create the Employee object
- */
 
 public class Employee {
 
@@ -26,10 +21,6 @@ public class Employee {
         // will be used before we set our data
     }
 
-    // Employee constructor
-    /*
-     * it sets all its properties
-	 */
     public Employee(int id, int departmentId, String numberAssigned,
                     String firstName, String lastName, String email, String password,
                     String phoneNumber, int roleId, int status, String imgName,

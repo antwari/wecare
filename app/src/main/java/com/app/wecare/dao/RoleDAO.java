@@ -35,22 +35,20 @@ public class RoleDAO {
     }
 
     public void close() {
-        // if (database != null && database.isOpen())
         dbHelper.close();
         Log.v("DC", "Database Closed");
     }
 
     public void addRole(String name, String modifiedOn) {
-        ContentValues values = new ContentValues();
 
+        ContentValues values = new ContentValues();
         values.put(MySQLiteHelper.KEY_ROLE_NAME, name);
         values.put(MySQLiteHelper.KEY_ROLE_MODIFIED_ON, modifiedOn);
-
         database.insert(MySQLiteHelper.TABLE_ROLE, null, values);
 
     }
 
-    // put cursor to role object
+    // put cursor into Role object
     private Role cursorToRole(Cursor cursor) {
         Role role = new Role();
         role.setId(cursor.getInt(0));
@@ -59,7 +57,6 @@ public class RoleDAO {
         return role;
     }
 
-    // update Role table
     public int updateRole(int id, String name, String modifiedOn) {
         ContentValues values = new ContentValues();
         values.put(MySQLiteHelper.KEY_ROLE_NAME, name);
@@ -68,13 +65,11 @@ public class RoleDAO {
         return num;
     }
 
-    // delete role object
-    public void deleteRole(Role role) {
+    public void deleteRoleByRoleObject(Role role) {
         database.delete(MySQLiteHelper.TABLE_ROLE, MySQLiteHelper.KEY_ROLE_ID + " = " + role.getId(), null);
 
     }
 
-    // get All roles
     public List<Role> getAllRoles() {
         List<Role> roles = new LinkedList<Role>();
 
@@ -118,11 +113,9 @@ public class RoleDAO {
         Role role = cursorToRole(cursor);
 
         cursor.close();
-        // return role
         return role;
     }
 
-    // get All employee images
     public List<EmployeeRole> getAllEmployeesRoles(List<Employee> employees) {
         List<EmployeeRole> employeeRoles = new LinkedList<EmployeeRole>();
 

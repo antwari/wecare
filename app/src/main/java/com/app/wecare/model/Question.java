@@ -5,12 +5,14 @@ public class Question {
     private int id;
     private String name;
     /*
-    Employee
-    --------
-    0 for poor 1 for average 2 for good
-    Business
-    --------
-    3 for poor 4 for average 5 for good
+    In Employee
+    -----------
+    category 0 for poor rank , 1 for average rank and 2  for good rank
+
+
+    In Business
+    -----------
+     category 3 for poor rank , 4 for average rank and 5 for good rank
      */
     private int category;
     private String modifiedOn;
@@ -20,7 +22,7 @@ public class Question {
         this.id = id;
         this.name = name;
         this.category = category;
-        this.modifiedOn=modifiedOn;
+        this.modifiedOn = modifiedOn;
     }
 
     public Question() {

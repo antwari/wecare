@@ -33,24 +33,21 @@ public class QuestionDAO {
     }
 
     public void close() {
-        // if (database != null && database.isOpen())
         dbHelper.close();
         Log.v("DC", "Database Closed");
     }
 
     public void addQuestion(int id, String name, int category, String modifiedOn) {
         ContentValues values = new ContentValues();
-
         values.put(MySQLiteHelper.KEY_QUESTION_ID, id);
         values.put(MySQLiteHelper.KEY_QUESTION_NAME, name);
         values.put(MySQLiteHelper.KEY_QUESTION_CATEGORY, category);
         values.put(MySQLiteHelper.KEY_QUESTION_MODIFIED_ON, modifiedOn);
-
         database.insert(MySQLiteHelper.TABLE_QUESTION, null, values);
 
     }
 
-    // put cursor to question object
+    // put cursor into Question object
     private Question cursorToQuestion(Cursor cursor) {
         Question question = new Question();
         question.setId(cursor.getInt(0));
@@ -60,7 +57,6 @@ public class QuestionDAO {
         return question;
     }
 
-    // update Question table
     public int updateQuestion(int id, String name, int category, String modifiedOn) {
         ContentValues values = new ContentValues();
         values.put(MySQLiteHelper.KEY_QUESTION_NAME, name);
@@ -70,13 +66,11 @@ public class QuestionDAO {
         return num;
     }
 
-    // delete question object
-    public void deleteQuestion(Question question) {
+    public void deleteQuestionByQuestionObject(Question question) {
         database.delete(MySQLiteHelper.TABLE_QUESTION, MySQLiteHelper.KEY_QUESTION_ID + " = " + question.getId(), null);
 
     }
 
-    // get All questions
     public List<Question> getAllQuestions() {
         List<Question> questions = new LinkedList<Question>();
 
@@ -116,15 +110,12 @@ public class QuestionDAO {
         //  if we got results get the first one
         if (cursor != null)
             cursor.moveToFirst();
-
         Question question = cursorToQuestion(cursor);
-
         cursor.close();
-        // return role
+
         return question;
     }
 
-    // get All departments
     public List<Question> getQuestionByCategory(int category) {
         List<Question> questions = new LinkedList<Question>();
 
@@ -144,11 +135,8 @@ public class QuestionDAO {
 
 
         for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
-
             Question question = cursorToQuestion(cursor);
             questions.add(question);
-
-
         }
 
 

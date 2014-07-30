@@ -66,7 +66,6 @@ public class BusinessRankDAO {
 
     }
 
-    // update TABLE_BUSINESS_RANK
     public int updateBusinessRank(int id, int rank, String date) {
         ContentValues values = new ContentValues();
         values.put(MySQLiteHelper.KEY_BUSINESS_RANK_RANK, rank);
@@ -81,7 +80,6 @@ public class BusinessRankDAO {
 
     }
 
-    // get All BusinessRank objects in a list
     public List<BusinessRank> getAllBusinessRank() {
         List<BusinessRank> businessRanks = new LinkedList<BusinessRank>();
 

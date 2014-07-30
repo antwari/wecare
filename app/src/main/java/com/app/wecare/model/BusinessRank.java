@@ -1,14 +1,6 @@
 package com.app.wecare.model;
 
 
-
-/*
- * BusinessRank Class
- * ----------------
- * This class is used to create the BusinessRank object
- * You can rank a business , the whole business  in general
- */
-
 public class BusinessRank {
     // fields
     private int id;

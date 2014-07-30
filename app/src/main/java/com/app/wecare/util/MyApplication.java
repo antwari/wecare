@@ -2,6 +2,7 @@ package com.app.wecare.util;
 
 import android.app.Application;
 
+
 public class MyApplication extends Application {
 
     private int departmentId;

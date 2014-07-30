@@ -57,7 +57,6 @@ public class BusinessRankCommentDAO {
         return businessRankComment;
     }
 
-    // update TABLE_BUSINESS_RANK_COMMENT
     public int updateBusinessRankComment(int id, String name, int businessRankId) {
         ContentValues values = new ContentValues();
         values.put(MySQLiteHelper.KEY_BUSINESS_RANK_COMMENT_NAME, name);
@@ -66,13 +65,11 @@ public class BusinessRankCommentDAO {
         return num;
     }
 
-    // delete BusinessRankComment object
     public void deleteBusinessRankCommentByObject(BusinessRankComment businessRankComment) {
         database.delete(MySQLiteHelper.TABLE_BUSINESS_RANK_COMMENT, MySQLiteHelper.KEY_BUSINESS_RANK_COMMENT_ID + " = " + businessRankComment.getId(), null);
 
     }
 
-    // get All businessRankComments in a List of  BusinessRankComment
     public List<BusinessRankComment> getAllBusinessRankComment() {
         List<BusinessRankComment> businessRankComments = new LinkedList<BusinessRankComment>();
 

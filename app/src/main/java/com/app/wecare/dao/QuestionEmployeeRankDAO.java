@@ -34,23 +34,21 @@ public class QuestionEmployeeRankDAO {
     }
 
     public void close() {
-        // if (database != null && database.isOpen())
         dbHelper.close();
         Log.v("DC", "Database Closed");
     }
 
     public void addQuestionEmployeeRank(int id, int questionId, int employeeRankId) {
-        ContentValues values = new ContentValues();
 
+        ContentValues values = new ContentValues();
         values.put(MySQLiteHelper.KEY_QUESTION_EMPLOYEE_RANK_ID, id);
         values.put(MySQLiteHelper.KEY_QUESTION_EMPLOYEE_RANK_QUESTION_ID, questionId);
         values.put(MySQLiteHelper.KEY_QUESTION_EMPLOYEE_RANK_EMPLOYEE_RANK_Id, employeeRankId);
-
         database.insert(MySQLiteHelper.TABLE_QUESTION_EMPLOYEE_RANK, null, values);
 
     }
 
-    // put cursor to QuestionEmployeeRank object
+    // put cursor into QuestionEmployeeRank object
     private QuestionEmployeeRank cursorToQuestionEmployeeRank(Cursor cursor) {
 
         QuestionEmployeeRank questionEmployeeRank = new QuestionEmployeeRank();
@@ -61,7 +59,6 @@ public class QuestionEmployeeRankDAO {
         return questionEmployeeRank;
     }
 
-    // update TABLE_QUESTION_EMPLOYEE_RANK
     public int updateQuestionEmployeeRank(int id, int questionId, int employeeRankId) {
         ContentValues values = new ContentValues();
         values.put(MySQLiteHelper.KEY_QUESTION_EMPLOYEE_RANK_QUESTION_ID, questionId);
@@ -70,13 +67,11 @@ public class QuestionEmployeeRankDAO {
         return num;
     }
 
-    // delete QuestionEmployeeRank object
-    public void deleteQuestionEmployeeRankByObject(QuestionEmployeeRank questionEmployeeRank) {
+    public void deleteQuestionEmployeeRankByQuestionEmployeeRankObject(QuestionEmployeeRank questionEmployeeRank) {
         database.delete(MySQLiteHelper.TABLE_QUESTION_EMPLOYEE_RANK, MySQLiteHelper.KEY_QUESTION_EMPLOYEE_RANK_ID + " = " + questionEmployeeRank.getId(), null);
 
     }
 
-    // get All questionEmployeeRank
     public List<QuestionEmployeeRank> getAllQuestionEmployeeRank() {
         List<QuestionEmployeeRank> questionEmployeeRanks = new LinkedList<QuestionEmployeeRank>();
 
@@ -116,11 +111,10 @@ public class QuestionEmployeeRankDAO {
         //  if we got results get the first one
         if (cursor != null)
             cursor.moveToFirst();
-
         QuestionEmployeeRank questionEmployeeRank = cursorToQuestionEmployeeRank(cursor);
-
         cursor.close();
-        // return role
+
+
         return questionEmployeeRank;
     }
 

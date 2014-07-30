@@ -25,25 +25,20 @@ public class EmployeesGridAdapter extends ArrayAdapter<Employee> {
     List<EmployeeImage> images = null;
     List<EmployeeRole> roles = null;
 
-    public EmployeesGridAdapter(Context mContext, int layoutResourceId, List<Employee> employees, List<EmployeeImage> images , List<EmployeeRole> roles) {
+    public EmployeesGridAdapter(Context mContext, int layoutResourceId, List<Employee> employees, List<EmployeeImage> images, List<EmployeeRole> roles) {
 
         super(mContext, layoutResourceId, employees);
 
         this.layoutResourceId = layoutResourceId;
         this.mContext = mContext;
         this.images = images;
-        this.roles=roles;
+        this.roles = roles;
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        /*
-         * The convertView argument is essentially a "ScrapView" as described is Lucas post
-         * http://lucasr.org/2012/04/05/performance-tips-for-androids-listview/
-         * It will have a non-null value when ListView is asking you recycle the row layout.
-         * So, when convertView is not null, you should simply update its contents instead of inflating a new row layout.
-         */
+
         if (convertView == null) {
             // inflate the layout
             LayoutInflater inflater = ((Activity) mContext).getLayoutInflater();
@@ -53,7 +48,7 @@ public class EmployeesGridAdapter extends ArrayAdapter<Employee> {
         // object item based on the position
         Employee employee = getItem(position);
         EmployeeImage image = images.get(position);
-        EmployeeRole role= roles.get(position);
+        EmployeeRole role = roles.get(position);
 
         //------
 
@@ -62,11 +57,8 @@ public class EmployeesGridAdapter extends ArrayAdapter<Employee> {
 
         TextView roleName = (TextView) convertView
                 .findViewById(R.id.tv_employee_role);
-//        RoleDAO roleDAO = new RoleDAO(this.getContext());
-        // ..........::::::::::::here:::::::::::::::::::
-//        roleDAO.open();
+
         String employeeRole = role.getRole();
-//        roleDAO.close();
 
         roleName.setText(employeeRole);
 

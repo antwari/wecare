@@ -35,7 +35,6 @@ public class EmployeeRankCommentDAO {
     }
 
     public void close() {
-        // if (database != null && database.isOpen())
         dbHelper.close();
         Log.v("DC", "Database Closed");
     }
@@ -43,16 +42,14 @@ public class EmployeeRankCommentDAO {
     public void addEmployeeRankComment(int id, String name, int employeeRankId) {
 
         ContentValues values = new ContentValues();
-
         values.put(MySQLiteHelper.KEY_EMPLOYEE_RANK_COMMENT_ID, id);
         values.put(MySQLiteHelper.KEY_EMPLOYEE_RANK_COMMENT_NAME, name);
         values.put(MySQLiteHelper.KEY_EMPLOYEE_RANK_COMMENT_EMPLOYEE_RANK_Id, employeeRankId);
-
         database.insert(MySQLiteHelper.TABLE_EMPLOYEE_RANK_COMMENT, null, values);
 
     }
 
-    // put cursor to EmployeeRankComment object
+    // put cursor into EmployeeRankComment object
     private EmployeeRankComment cursorToEmployeeRankComment(Cursor cursor) {
 
         EmployeeRankComment employeeRankComment = new EmployeeRankComment();
@@ -63,7 +60,6 @@ public class EmployeeRankCommentDAO {
         return employeeRankComment;
     }
 
-    // update TABLE_BUSINESS_RANK_COMMENT
     public int updateEmployeeRankComment(int id, String name, int employeeRankId) {
         ContentValues values = new ContentValues();
         values.put(MySQLiteHelper.KEY_EMPLOYEE_RANK_COMMENT_NAME, name);
@@ -72,13 +68,11 @@ public class EmployeeRankCommentDAO {
         return num;
     }
 
-    // delete EmployeeRankComment object
     public void deleteEmployeeRankCommentByObject(EmployeeRankComment employeeRankComment) {
         database.delete(MySQLiteHelper.TABLE_EMPLOYEE_RANK_COMMENT, MySQLiteHelper.KEY_EMPLOYEE_RANK_COMMENT_ID + " = " + employeeRankComment.getId(), null);
 
     }
 
-    // get All EmployeeRankComment
     public List<EmployeeRankComment> getAllEmployeeRankComment() {
         List<EmployeeRankComment> employeeRankComments = new LinkedList<EmployeeRankComment>();
 
@@ -118,11 +112,9 @@ public class EmployeeRankCommentDAO {
         //  if we got results get the first one
         if (cursor != null)
             cursor.moveToFirst();
-
         EmployeeRankComment employeeRankComment = cursorToEmployeeRankComment(cursor);
-
         cursor.close();
-        // return role
+
         return employeeRankComment;
     }
 
@@ -142,11 +134,9 @@ public class EmployeeRankCommentDAO {
         //  if we got results get the first one
         if (cursor != null)
             cursor.moveToFirst();
-
         EmployeeRankComment employeeRankComment = cursorToEmployeeRankComment(cursor);
-
         cursor.close();
-        // return role
+
         return employeeRankComment;
     }
 

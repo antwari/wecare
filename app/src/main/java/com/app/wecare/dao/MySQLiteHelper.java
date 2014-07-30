@@ -12,7 +12,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "customer";
     private static final int DATABASE_VERSION = 1;
 
-    // customer database table names
+    //database table names
     public static final String TABLE_EMPLOYEE = "employee";
     public static final String TABLE_EMPLOYEE_RANK = "employee_rank";
     public static final String TABLE_BUSINESS_RANK = "business_rank";
@@ -25,7 +25,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
     public static final String TABLE_QUESTION_EMPLOYEE_RANK = "question_employee_rank";
 
 
-    // employee Table Columns names
+    // TABLE_EMPLOYEE_RANK Columns names
     public static final String KEY_EMPLOYEE_ID = "id";
     public static final String KEY_EMPLOYEE_DEPARTMENT_ID = "department_id";
     public static final String KEY_EMPLOYEE_NUMBER_ASSIGNED = "number_assigned";
@@ -39,62 +39,57 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
     public static final String KEY_EMPLOYEE_IMAGE_NAME = "image_name";
     public static final String KEY_EMPLOYEE_MODIFIED_ON = "modified_on";
 
-    // department Table Columns names
+    // TABLE_DEPARTMENT Columns names
     public static final String KEY_DEPARTMENT_ID = "id";
     public static final String KEY_DEPARTMENT_NAME = "name";
     public static final String KEY_DEPARTMENT_MODIFIED_ON = "modified_on";
 
-    // role Table Columns names
+    // TABLE_ROLE Columns names
     public static final String KEY_ROLE_ID = "id";
     public static final String KEY_ROLE_NAME = "name";
     public static final String KEY_ROLE_MODIFIED_ON = "modified_on";
 
-    // employee_rank Table Columns names
+    // TABLE_EMPLOYEE_RANK Table Columns names
     public static final String KEY_EMPLOYEE_RANK_ID = "id";
     public static final String KEY_EMPLOYEE_RANK_EMPLOYEE_ID = "employee_id";
     public static final String KEY_EMPLOYEE_RANK_RANK = "rank";
     public static final String KEY_EMPLOYEE_RANK_DATE = "date";
 
-    // business_rank Table Columns names
+    // TABLE_BUSINESS_RANK Columns names
     public static final String KEY_BUSINESS_RANK_ID = "id";
     public static final String KEY_BUSINESS_RANK_RANK = "rank";
     public static final String KEY_BUSINESS_RANK_DATE = "date";
 
-    //  question Table Columns names
-
+    //  TABLE_QUESTION Columns names
     public static final String KEY_QUESTION_ID = "id";
     public static final String KEY_QUESTION_NAME = "name";
     public static final String KEY_QUESTION_CATEGORY = "category";
     public static final String KEY_QUESTION_MODIFIED_ON = "modified_on";
 
 
-    // business_rank_comment  Columns names
-
+    // TABLE_BUSINESS_RANK_COMMENT  Columns names
     public static final String KEY_BUSINESS_RANK_COMMENT_ID = "id";
     public static final String KEY_BUSINESS_RANK_COMMENT_NAME = "name";
     public static final String KEY_BUSINESS_RANK_COMMENT_BUSINESS_RANK_Id = "business_rank_id";
 
     // TABLE_EMPLOYEE_RANK_COMMENT  Columns names
-
     public static final String KEY_EMPLOYEE_RANK_COMMENT_ID = "id";
     public static final String KEY_EMPLOYEE_RANK_COMMENT_NAME = "name";
     public static final String KEY_EMPLOYEE_RANK_COMMENT_EMPLOYEE_RANK_Id = "employee_rank_id";
 
 
     // TABLE_QUESTION_BUSINESS_RANK Columns names
-
     public static final String KEY_QUESTION_BUSINESS_RANK_ID = "id";
     public static final String KEY_QUESTION_BUSINESS_RANK_QUESTION_ID = "question_id";
     public static final String KEY_QUESTION_BUSINESS_RANK_BUSINESS_RANK_Id = "business_rank_id";
 
     // TABLE_QUESTION_EMPLOYEE_RANK Columns names
-
     public static final String KEY_QUESTION_EMPLOYEE_RANK_ID = "id";
     public static final String KEY_QUESTION_EMPLOYEE_RANK_QUESTION_ID = "question_id";
     public static final String KEY_QUESTION_EMPLOYEE_RANK_EMPLOYEE_RANK_Id = "employee_rank_id";
 
 
-    // query for creating employee tables
+    // query for creating TABLE_EMPLOYEE
     private static final String CREATE_TABLE_EMPLOYEE = "CREATE TABLE "
             + TABLE_EMPLOYEE + " ( " + KEY_EMPLOYEE_ID
             + " INTEGER PRIMARY KEY AUTOINCREMENT, "
@@ -107,19 +102,19 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             + KEY_EMPLOYEE_IMAGE_NAME + " TEXT(100), "
             + KEY_EMPLOYEE_MODIFIED_ON + " TEXT);";
 
-    // query for creating department tables
+    // query for creating TABLE_DEPARTMENT
     private static final String CREATE_TABLE_DEPARTMENT = "CREATE TABLE "
             + TABLE_DEPARTMENT + " ( " + KEY_DEPARTMENT_ID
             + " INTEGER PRIMARY KEY AUTOINCREMENT, " + KEY_DEPARTMENT_NAME
             + " TEXT , " + KEY_DEPARTMENT_MODIFIED_ON + "  TEXT);";
 
-    // query creating role tables
+    // query creating TABLE_ROLE
     private static final String CREATE_TABLE_ROLE = "CREATE TABLE "
             + TABLE_ROLE + " ( " + KEY_ROLE_ID
             + " INTEGER PRIMARY KEY AUTOINCREMENT, " + KEY_ROLE_NAME
             + " TEXT, " + KEY_ROLE_MODIFIED_ON + " TEXT);";
 
-    // query creating employee_rank tables
+    // query creating TABLE_EMPLOYEE_RANK
 
     private static final String CREATE_TABLE_EMPLOYEE_RANK = "CREATE TABLE "
             + TABLE_EMPLOYEE_RANK + " ( " + KEY_EMPLOYEE_RANK_ID
@@ -128,19 +123,19 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             + KEY_EMPLOYEE_RANK_RANK + " INTEGER, " + KEY_EMPLOYEE_RANK_DATE
             + " TEXT );";
 
-    // query creating business_rank tables
+    // query creating TABLE_BUSINESS_RANK
     private static final String CREATE_TABLE_BUSINESS_RANK = "CREATE TABLE "
             + TABLE_BUSINESS_RANK + " ( " + KEY_BUSINESS_RANK_ID
             + " INTEGER PRIMARY KEY AUTOINCREMENT, " + KEY_BUSINESS_RANK_RANK
             + " INTEGER, " + KEY_BUSINESS_RANK_DATE + " TEXT );";
 
-    // query creating question tables
+    // query creating TABLE_QUESTION
     private static final String CREATE_TABLE_QUESTION = "CREATE TABLE "
             + TABLE_QUESTION + " ( " + KEY_QUESTION_ID
             + " INTEGER PRIMARY KEY , " + KEY_QUESTION_NAME
             + " TEXT, " + KEY_QUESTION_CATEGORY + " INTEGER , " + KEY_QUESTION_MODIFIED_ON + " TEXT);";
 
-    // query creating business_rank_comment tables
+    // query creating TABLE_BUSINESS_RANK_COMMENT
     private static final String CREATE_TABLE_BUSINESS_RANK_COMMENT = "CREATE TABLE "
             + TABLE_BUSINESS_RANK_COMMENT + " ( " + KEY_BUSINESS_RANK_COMMENT_ID
             + " INTEGER PRIMARY KEY , " + KEY_BUSINESS_RANK_COMMENT_NAME
@@ -148,7 +143,6 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
 
 
     // query creating TABLE_QUESTION_BUSINESS_RANK
-
     private static final String CREATE_TABLE_QUESTION_BUSINESS_RANK = "CREATE TABLE "
             + TABLE_QUESTION_BUSINESS_RANK + " ( " + KEY_QUESTION_BUSINESS_RANK_ID
             + " INTEGER PRIMARY KEY , " + KEY_QUESTION_BUSINESS_RANK_QUESTION_ID
@@ -156,14 +150,12 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
 
 
     // query creating TABLE_QUESTION_BUSINESS_RANK tables
-
     private static final String CREATE_TABLE_EMPLOYEE_RANK_COMMENT = "CREATE TABLE "
             + TABLE_EMPLOYEE_RANK_COMMENT + " ( " + KEY_EMPLOYEE_RANK_COMMENT_ID
             + " INTEGER PRIMARY KEY , " + KEY_EMPLOYEE_RANK_COMMENT_NAME
             + " TEXT, " + KEY_EMPLOYEE_RANK_COMMENT_EMPLOYEE_RANK_Id + " INTEGER );";
 
     // query creating TABLE_QUESTION_EMPLOYEE_RANK tables
-
     private static final String CREATE_TABLE_QUESTION_EMPLOYEE_RANK = "CREATE TABLE "
             + TABLE_QUESTION_EMPLOYEE_RANK + " ( " + KEY_QUESTION_EMPLOYEE_RANK_ID
             + " INTEGER PRIMARY KEY , " + KEY_QUESTION_EMPLOYEE_RANK_QUESTION_ID
@@ -177,7 +169,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
         this.context = context;
     }
 
-    // unknown method
+
     @Override
     public void onOpen(SQLiteDatabase database) {
 
@@ -189,7 +181,6 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase database) {
 
         // creating tables in the database
-
         database.execSQL(CREATE_TABLE_EMPLOYEE);
         database.execSQL(CREATE_TABLE_DEPARTMENT);
         database.execSQL(CREATE_TABLE_ROLE);
@@ -230,7 +221,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
     }
 
     /*
-     * check if a given table has data (all tables has id )
+     * check if a given table is not empty
      */
     public boolean checkIfTAbleHasData(String tableName) {
         boolean hasData = false;

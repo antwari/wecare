@@ -32,23 +32,21 @@ public class QuestionBusinessRankDAO {
     }
 
     public void close() {
-        // if (database != null && database.isOpen())
         dbHelper.close();
         Log.v("DC", "Database Closed");
     }
 
     public void addQuestionBusinessRank(int id, int questionId, int businessRankId) {
-        ContentValues values = new ContentValues();
 
+        ContentValues values = new ContentValues();
         values.put(MySQLiteHelper.KEY_QUESTION_BUSINESS_RANK_ID, id);
         values.put(MySQLiteHelper.KEY_QUESTION_BUSINESS_RANK_QUESTION_ID, questionId);
         values.put(MySQLiteHelper.KEY_QUESTION_BUSINESS_RANK_BUSINESS_RANK_Id, businessRankId);
-
         database.insert(MySQLiteHelper.TABLE_QUESTION_BUSINESS_RANK, null, values);
 
     }
 
-    // put cursor to QuestionBusinessRank object
+    // put cursor into QuestionBusinessRank object
     private QuestionBusinessRank cursorToQuestionBusinessRank(Cursor cursor) {
 
         QuestionBusinessRank questionBusinessRank = new QuestionBusinessRank();
@@ -59,7 +57,6 @@ public class QuestionBusinessRankDAO {
         return questionBusinessRank;
     }
 
-    // update TABLE_QUESTION_BUSINESS_RANK
     public int updateQuestionBusinessRank(int id, int questionId, int businessRankId) {
         ContentValues values = new ContentValues();
         values.put(MySQLiteHelper.KEY_QUESTION_BUSINESS_RANK_QUESTION_ID, questionId);
@@ -68,13 +65,11 @@ public class QuestionBusinessRankDAO {
         return num;
     }
 
-    // delete QuestionBusinessRank object
-    public void deleteQuestionBusinessRankByObject(QuestionBusinessRank questionBusinessRank) {
+    public void deleteQuestionBusinessRankByQuestionBusinessRankObject(QuestionBusinessRank questionBusinessRank) {
         database.delete(MySQLiteHelper.TABLE_QUESTION_BUSINESS_RANK, MySQLiteHelper.KEY_QUESTION_BUSINESS_RANK_ID + " = " + questionBusinessRank.getId(), null);
 
     }
 
-    // get All questionBusinessRank
     public List<QuestionBusinessRank> getAllQuestionBusinessRank() {
         List<QuestionBusinessRank> questionBusinessRanks = new LinkedList<QuestionBusinessRank>();
 
@@ -114,11 +109,9 @@ public class QuestionBusinessRankDAO {
         //  if we got results get the first one
         if (cursor != null)
             cursor.moveToFirst();
-
         QuestionBusinessRank questionBusinessRank = cursorToQuestionBusinessRank(cursor);
-
         cursor.close();
-        // return role
+
         return questionBusinessRank;
     }
 

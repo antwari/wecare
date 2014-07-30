@@ -247,9 +247,10 @@ public class EmployeeDAO {
     }
 
 
-    /*check if department has employee
-     *return true if department has at least one employee or more and false if it has no employee
-     */
+    /*
+    *check if department has employee
+    *return true if department has at least one employee or more and false if it has no employee
+    */
     public boolean CheckIfDepartmentHasEmployee(int id) {
 
 
@@ -294,10 +295,11 @@ public class EmployeeDAO {
     }
 
 
-    // /storage/emulated/0/institution/ : nexus
-    // /storage/sdcard0/institution/ : sumsung
+    /*
+    *path of images on nexus : /storage/emulated/0/institution/
+    * path of images on samsung : /storage/sdcard0/institution/
+     */
 
-    // get All employee image
     public EmployeeImage getEmployeeImage(Employee employee) {
 
         ImageChanger imageChanger = new ImageChanger();
@@ -313,12 +315,11 @@ public class EmployeeDAO {
         employeeImage.setId(employee.getId());
         employeeImage.setImage(bm);
 
-        Log.d("getAllBooks()", employeeImage.toString());
+        Log.d("getEmployeeImage()", employeeImage.toString());
         return employeeImage;
     }
 
 
-    // get All employee not in circle image
     public EmployeeImage getEmployeeImageInNormalShape(Employee employee) {
 
 
@@ -331,11 +332,10 @@ public class EmployeeDAO {
         employeeImage.setId(employee.getId());
         employeeImage.setImage(bm);
 
-        Log.d("getAllBooks()", employeeImage.toString());
+        Log.d("getEmployeeImageInNormalShape()", employeeImage.toString());
         return employeeImage;
     }
 
-    // get All employee images
     public List<EmployeeImage> getAllEmployeesImages(List<Employee> employees) {
         List<EmployeeImage> images = new LinkedList<EmployeeImage>();
         ImageChanger imageChanger = new ImageChanger();
@@ -359,19 +359,17 @@ public class EmployeeDAO {
 
         }
 
-        Log.d("getAllBooks()", images.toString());
+        Log.d("getAllEmployeesImages()", images.toString());
 
         return images;
     }
 
-    // get employee Department
     public EmployeeDepartment getEmployeeDepartment(Employee employee) {
         String[] allColumns = {MySQLiteHelper.KEY_DEPARTMENT_ID, MySQLiteHelper.KEY_DEPARTMENT_NAME, MySQLiteHelper.KEY_DEPARTMENT_MODIFIED_ON};
 
 
         EmployeeDepartment employeeDepartment = new EmployeeDepartment();
         employeeDepartment.setEmployeeId(employee.getId());
-        // get the employee department here
 
         Cursor cursor = database.query(MySQLiteHelper.TABLE_DEPARTMENT, // a. table
                 allColumns, // b. column names
@@ -399,15 +397,12 @@ public class EmployeeDAO {
     }
 
 
-    // get employee role
     public EmployeeRole getEmployeeRole(Employee employee) {
         String[] allColumns = {MySQLiteHelper.KEY_ROLE_ID, MySQLiteHelper.KEY_ROLE_NAME, MySQLiteHelper.KEY_ROLE_MODIFIED_ON};
 
 
         EmployeeRole employeeRole = new EmployeeRole();
         employeeRole.setEmployeeId(employee.getId());
-        // get the employee role here
-
         Cursor cursor = database.query(MySQLiteHelper.TABLE_ROLE, // a. table
                 allColumns, // b. column names
                 MySQLiteHelper.KEY_ROLE_ID + " = ?", // c. selections
@@ -433,7 +428,6 @@ public class EmployeeDAO {
         return employeeRole;
     }
 
-    // get All employee roles
     public List<EmployeeRole> getEmployeesRoles(List<Employee> employees) {
         List<EmployeeRole> employeeRoles = new LinkedList<EmployeeRole>();
         String[] allColumns = {MySQLiteHelper.KEY_ROLE_ID, MySQLiteHelper.KEY_ROLE_NAME, MySQLiteHelper.KEY_ROLE_MODIFIED_ON};
@@ -445,8 +439,6 @@ public class EmployeeDAO {
 
                 EmployeeRole employeeRole = new EmployeeRole();
                 employeeRole.setEmployeeId(employee.getId());
-                // get the employee role here
-
                 Cursor cursor = database.query(MySQLiteHelper.TABLE_ROLE, // a. table
                         allColumns, // b. column names
                         MySQLiteHelper.KEY_ROLE_ID + " = ?", // c. selections
@@ -459,20 +451,15 @@ public class EmployeeDAO {
                 int iRole = cursor.getColumnIndex(MySQLiteHelper.KEY_ROLE_NAME);
 
                 for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
-
                     employeeRole.setRole(cursor.getString(iRole));
                 }
-
-
                 cursor.close();
-
                 employeeRoles.add(employeeRole);
-
             }
 
         }
 
-        Log.d("getEmployeeRole()", employeeRoles.toString());
+        Log.d("getEmployeesRoles()", employeeRoles.toString());
 
         return employeeRoles;
     }

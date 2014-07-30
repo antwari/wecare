@@ -37,7 +37,6 @@ public class EmployeeRankDAO {
     }
 
     public void close() {
-        // if (database != null && database.isOpen())
         dbHelper.close();
         Log.v("DC", "Database Closed");
     }
@@ -59,7 +58,7 @@ public class EmployeeRankDAO {
 
     }
 
-    // put cursor to TABLE_EMPLOYEE_RANK object
+    // put cursor into EmployeeRank object
     private EmployeeRank cursorToEmployeeRank(Cursor cursor) {
 
         EmployeeRank item = new EmployeeRank();
@@ -71,23 +70,22 @@ public class EmployeeRankDAO {
 
     }
 
-    // update TABLE_EMPLOYEE_RANK
     public int updateEmployeeRank(int id, int employeeId, int rank, String date) {
+
         ContentValues values = new ContentValues();
         values.put(MySQLiteHelper.KEY_EMPLOYEE_RANK_EMPLOYEE_ID, employeeId);
         values.put(MySQLiteHelper.KEY_EMPLOYEE_RANK_RANK, rank);
         values.put(MySQLiteHelper.KEY_EMPLOYEE_RANK_DATE, date);
         int num = database.update(MySQLiteHelper.TABLE_EMPLOYEE_RANK, values, MySQLiteHelper.KEY_EMPLOYEE_RANK_ID + " = " + id, null);
         return num;
+
     }
 
-    // delete TABLE_EMPLOYEE_RANK object
-    public void deleteEmployeeRank(EmployeeRank employeeRank) {
+    public void deleteEmployeeRankByEmployeeRankObject(EmployeeRank employeeRank) {
         database.delete(MySQLiteHelper.TABLE_EMPLOYEE_RANK, MySQLiteHelper.KEY_EMPLOYEE_RANK_ID + " = " + employeeRank.getId(), null);
 
     }
 
-    // get All TABLE_EMPLOYEE_RANK objects
     public List<EmployeeRank> getAllEmployeeRank() {
         List<EmployeeRank> employeeRanks = new LinkedList<EmployeeRank>();
 
@@ -111,7 +109,6 @@ public class EmployeeRankDAO {
         return employeeRanks;
     }
 
-    // get TABLE_EMPLOYEE_RANK object
     public EmployeeRank getEmployeeRankById(int id) {
 
         //  build query
@@ -128,10 +125,7 @@ public class EmployeeRankDAO {
         //  if we got results get the first one
         if (cursor != null)
             cursor.moveToFirst();
-
-
         EmployeeRank employeeRank = cursorToEmployeeRank(cursor);
-
         cursor.close();
 
         return employeeRank;

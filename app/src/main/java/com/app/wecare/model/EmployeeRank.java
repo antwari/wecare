@@ -1,16 +1,6 @@
 package com.app.wecare.model;
 
 
-
-/*
- * EmployeeRank Class
- * ----------------
- * This class is used to create the EmployeeRank object
- * You can rank one employer
- */
-
-import java.util.Date;
-
 public class EmployeeRank {
 
     // fields

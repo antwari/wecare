@@ -8,7 +8,8 @@ public class SampleDatabaseData {
 
 
     public void insertSampleDataInDatabase(SQLiteDatabase db) {
-        // inserting user slang
+
+        // inserting employee slang
         ContentValues cv = new ContentValues();
         cv.put(MySQLiteHelper.KEY_EMPLOYEE_FIRST_NAME, "NTWARI SHYAKA");
         cv.put(MySQLiteHelper.KEY_EMPLOYEE_LAST_NAME, "AIME");
@@ -23,7 +24,7 @@ public class SampleDatabaseData {
         cv.put(MySQLiteHelper.KEY_EMPLOYEE_NUMBER_ASSIGNED, "TELLER 001");
         db.insert(MySQLiteHelper.TABLE_EMPLOYEE, null, cv);
 
-        // inserting user Mahirwe
+        // inserting employee Mahirwe
         ContentValues img1 = new ContentValues();
         img1.put(MySQLiteHelper.KEY_EMPLOYEE_FIRST_NAME, "Mahirwe");
         img1.put(MySQLiteHelper.KEY_EMPLOYEE_LAST_NAME, "Yvonne");
@@ -38,7 +39,7 @@ public class SampleDatabaseData {
         img1.put(MySQLiteHelper.KEY_EMPLOYEE_NUMBER_ASSIGNED, "TELLER 002");
         db.insert(MySQLiteHelper.TABLE_EMPLOYEE, null, img1);
 
-        // inserting user Eben
+        // inserting employee Eben
         ContentValues img2 = new ContentValues();
         img2.put(MySQLiteHelper.KEY_EMPLOYEE_FIRST_NAME, "Eben");
         img2.put(MySQLiteHelper.KEY_EMPLOYEE_LAST_NAME, "Mubiligi");
@@ -53,7 +54,7 @@ public class SampleDatabaseData {
         img2.put(MySQLiteHelper.KEY_EMPLOYEE_NUMBER_ASSIGNED, "TELLER 003");
         db.insert(MySQLiteHelper.TABLE_EMPLOYEE, null, img2);
 
-        // inserting user Ezer
+        // inserting employee Ezer
         ContentValues img4 = new ContentValues();
         img4.put(MySQLiteHelper.KEY_EMPLOYEE_FIRST_NAME, "Ezer");
         img4.put(MySQLiteHelper.KEY_EMPLOYEE_LAST_NAME, "Mubiligi");
@@ -68,7 +69,7 @@ public class SampleDatabaseData {
         img4.put(MySQLiteHelper.KEY_EMPLOYEE_NUMBER_ASSIGNED, "TELLER 004");
         db.insert(MySQLiteHelper.TABLE_EMPLOYEE, null, img4);
 
-        // inserting user Lily
+        // inserting employee Lily
         ContentValues img5 = new ContentValues();
         img5.put(MySQLiteHelper.KEY_EMPLOYEE_FIRST_NAME, "Lili");
         img5.put(MySQLiteHelper.KEY_EMPLOYEE_LAST_NAME, "NyinawaYezu");
@@ -83,7 +84,7 @@ public class SampleDatabaseData {
         img5.put(MySQLiteHelper.KEY_EMPLOYEE_NUMBER_ASSIGNED, "TELLER 005");
         db.insert(MySQLiteHelper.TABLE_EMPLOYEE, null, img5);
 
-        // inserting user Mugenzi
+        // inserting employee Mugenzi
         ContentValues img6 = new ContentValues();
         img6.put(MySQLiteHelper.KEY_EMPLOYEE_FIRST_NAME, "Mugenzi");
         img6.put(MySQLiteHelper.KEY_EMPLOYEE_LAST_NAME, "Aime");
@@ -98,7 +99,7 @@ public class SampleDatabaseData {
         img6.put(MySQLiteHelper.KEY_EMPLOYEE_NUMBER_ASSIGNED, "TELLER 006");
         db.insert(MySQLiteHelper.TABLE_EMPLOYEE, null, img6);
 
-        // inserting user Mugisha
+        // inserting employee Mugisha
         ContentValues img7 = new ContentValues();
         img7.put(MySQLiteHelper.KEY_EMPLOYEE_FIRST_NAME, "Mugisha");
         img7.put(MySQLiteHelper.KEY_EMPLOYEE_LAST_NAME, "Esther");
@@ -113,7 +114,7 @@ public class SampleDatabaseData {
         img7.put(MySQLiteHelper.KEY_EMPLOYEE_NUMBER_ASSIGNED, "TELLER 007");
         db.insert(MySQLiteHelper.TABLE_EMPLOYEE, null, img7);
 
-        // inserting user Mulisa
+        // inserting employee Mulisa
         ContentValues img8 = new ContentValues();
         img8.put(MySQLiteHelper.KEY_EMPLOYEE_FIRST_NAME, "Mulisa");
         img8.put(MySQLiteHelper.KEY_EMPLOYEE_LAST_NAME, "Mubiligi");
@@ -128,7 +129,7 @@ public class SampleDatabaseData {
         img8.put(MySQLiteHelper.KEY_EMPLOYEE_NUMBER_ASSIGNED, "TELLER 008");
         db.insert(MySQLiteHelper.TABLE_EMPLOYEE, null, img8);
 
-        // inserting user Mulisa
+        // inserting employee Mulisa
         ContentValues img9 = new ContentValues();
         img9.put(MySQLiteHelper.KEY_EMPLOYEE_FIRST_NAME, "Mulisa");
         img9.put(MySQLiteHelper.KEY_EMPLOYEE_LAST_NAME, "Mubiligi");
@@ -143,7 +144,7 @@ public class SampleDatabaseData {
         img9.put(MySQLiteHelper.KEY_EMPLOYEE_NUMBER_ASSIGNED, "TELLER 009");
         db.insert(MySQLiteHelper.TABLE_EMPLOYEE, null, img9);
 
-        // inserting user Mulisa
+        // inserting employee Mulisa
         ContentValues img10 = new ContentValues();
         img10.put(MySQLiteHelper.KEY_EMPLOYEE_FIRST_NAME, "Mulisa");
         img10.put(MySQLiteHelper.KEY_EMPLOYEE_LAST_NAME, "Mubiligi");
@@ -158,7 +159,7 @@ public class SampleDatabaseData {
         img10.put(MySQLiteHelper.KEY_EMPLOYEE_NUMBER_ASSIGNED, "TELLER 0010");
         db.insert(MySQLiteHelper.TABLE_EMPLOYEE, null, img10);
 
-        // inserting user Mulisa
+        // inserting employee Mulisa
         ContentValues img11 = new ContentValues();
         img11.put(MySQLiteHelper.KEY_EMPLOYEE_FIRST_NAME, "Mulisa");
         img11.put(MySQLiteHelper.KEY_EMPLOYEE_LAST_NAME, "Mubiligi");
@@ -173,7 +174,7 @@ public class SampleDatabaseData {
         img11.put(MySQLiteHelper.KEY_EMPLOYEE_NUMBER_ASSIGNED, "TELLER 0011");
         db.insert(MySQLiteHelper.TABLE_EMPLOYEE, null, img11);
 
-        // inserting user Mulisa
+        // inserting employee Mulisa
         ContentValues img12 = new ContentValues();
         img12.put(MySQLiteHelper.KEY_EMPLOYEE_FIRST_NAME, "Mulisa");
         img12.put(MySQLiteHelper.KEY_EMPLOYEE_LAST_NAME, "Mubiligi");
@@ -188,7 +189,7 @@ public class SampleDatabaseData {
         img12.put(MySQLiteHelper.KEY_EMPLOYEE_NUMBER_ASSIGNED, "TELLER 0012");
         db.insert(MySQLiteHelper.TABLE_EMPLOYEE, null, img12);
 
-        // inserting user Mulisa
+        // inserting employee Mulisa
         ContentValues img13 = new ContentValues();
         img13.put(MySQLiteHelper.KEY_EMPLOYEE_FIRST_NAME, "Mulisa");
         img13.put(MySQLiteHelper.KEY_EMPLOYEE_LAST_NAME, "Mubiligi");
@@ -203,7 +204,7 @@ public class SampleDatabaseData {
         img13.put(MySQLiteHelper.KEY_EMPLOYEE_NUMBER_ASSIGNED, "TELLER 0013");
         db.insert(MySQLiteHelper.TABLE_EMPLOYEE, null, img13);
 
-        // inserting user Mulisa
+        // inserting employee Mulisa
         ContentValues img14 = new ContentValues();
         img14.put(MySQLiteHelper.KEY_EMPLOYEE_FIRST_NAME, "Mulisa");
         img14.put(MySQLiteHelper.KEY_EMPLOYEE_LAST_NAME, "Mubiligi");
@@ -218,7 +219,7 @@ public class SampleDatabaseData {
         img14.put(MySQLiteHelper.KEY_EMPLOYEE_NUMBER_ASSIGNED, "TELLER 0014");
         db.insert(MySQLiteHelper.TABLE_EMPLOYEE, null, img14);
 
-        // inserting user Mulisa
+        // inserting employee Mulisa
         ContentValues img15 = new ContentValues();
         img15.put(MySQLiteHelper.KEY_EMPLOYEE_FIRST_NAME, "Mulisa");
         img15.put(MySQLiteHelper.KEY_EMPLOYEE_LAST_NAME, "Mubiligi");
@@ -233,7 +234,7 @@ public class SampleDatabaseData {
         img15.put(MySQLiteHelper.KEY_EMPLOYEE_NUMBER_ASSIGNED, "TELLER 0015");
         db.insert(MySQLiteHelper.TABLE_EMPLOYEE, null, img15);
 
-        // inserting user Mulisa
+        // inserting employee Mulisa
         ContentValues img16 = new ContentValues();
         img16.put(MySQLiteHelper.KEY_EMPLOYEE_FIRST_NAME, "Mulisa");
         img16.put(MySQLiteHelper.KEY_EMPLOYEE_LAST_NAME, "Mubiligi");
@@ -248,7 +249,7 @@ public class SampleDatabaseData {
         img16.put(MySQLiteHelper.KEY_EMPLOYEE_NUMBER_ASSIGNED, "TELLER 0016");
         db.insert(MySQLiteHelper.TABLE_EMPLOYEE, null, img16);
 
-        // inserting user Mulisa
+        // inserting employee Mulisa
         ContentValues img17 = new ContentValues();
         img17.put(MySQLiteHelper.KEY_EMPLOYEE_FIRST_NAME, "Mulisa");
         img17.put(MySQLiteHelper.KEY_EMPLOYEE_LAST_NAME, "Mubiligi");
@@ -263,7 +264,7 @@ public class SampleDatabaseData {
         img17.put(MySQLiteHelper.KEY_EMPLOYEE_NUMBER_ASSIGNED, "TELLER 0017");
         db.insert(MySQLiteHelper.TABLE_EMPLOYEE, null, img17);
 
-        // inserting user Mulisa
+        // inserting employee Mulisa
         ContentValues img18 = new ContentValues();
         img18.put(MySQLiteHelper.KEY_EMPLOYEE_FIRST_NAME, "Mulisa");
         img18.put(MySQLiteHelper.KEY_EMPLOYEE_LAST_NAME, "Mubiligi");
@@ -278,7 +279,7 @@ public class SampleDatabaseData {
         img18.put(MySQLiteHelper.KEY_EMPLOYEE_NUMBER_ASSIGNED, "TELLER 0018");
         db.insert(MySQLiteHelper.TABLE_EMPLOYEE, null, img18);
 
-        // inserting user Mulisa
+        // inserting employee Mulisa
         ContentValues img19 = new ContentValues();
         img19.put(MySQLiteHelper.KEY_EMPLOYEE_FIRST_NAME, "Mulisa");
         img19.put(MySQLiteHelper.KEY_EMPLOYEE_LAST_NAME, "Mubiligi");
@@ -293,7 +294,7 @@ public class SampleDatabaseData {
         img19.put(MySQLiteHelper.KEY_EMPLOYEE_NUMBER_ASSIGNED, "TELLER 0019");
         db.insert(MySQLiteHelper.TABLE_EMPLOYEE, null, img19);
 
-        // inserting user Mulisa
+        // inserting employee Mulisa
         ContentValues img20 = new ContentValues();
         img20.put(MySQLiteHelper.KEY_EMPLOYEE_FIRST_NAME, "Mulisa");
         img20.put(MySQLiteHelper.KEY_EMPLOYEE_LAST_NAME, "Mubiligi");
@@ -308,6 +309,7 @@ public class SampleDatabaseData {
         img20.put(MySQLiteHelper.KEY_EMPLOYEE_NUMBER_ASSIGNED, "TELLER 0020");
         db.insert(MySQLiteHelper.TABLE_EMPLOYEE, null, img20);
 
+        // inserting employee Slang
         ContentValues img21 = new ContentValues();
         img21.put(MySQLiteHelper.KEY_EMPLOYEE_FIRST_NAME, "NTWARI SHYAKA");
         img21.put(MySQLiteHelper.KEY_EMPLOYEE_LAST_NAME, "AIME");
@@ -322,7 +324,7 @@ public class SampleDatabaseData {
         img21.put(MySQLiteHelper.KEY_EMPLOYEE_NUMBER_ASSIGNED, "TELLER 0021");
         db.insert(MySQLiteHelper.TABLE_EMPLOYEE, null, img21);
 
-        // inserting department table
+        // <inserting into department table>
         ContentValues dp1 = new ContentValues();
         dp1.put(MySQLiteHelper.KEY_DEPARTMENT_NAME, "MARKETING");
         dp1.put(MySQLiteHelper.KEY_DEPARTMENT_MODIFIED_ON, "12:30PM");
@@ -368,7 +370,9 @@ public class SampleDatabaseData {
         dp9.put(MySQLiteHelper.KEY_DEPARTMENT_MODIFIED_ON, "12:04PM");
         db.insert(MySQLiteHelper.TABLE_DEPARTMENT, null, dp9);
 
-        // inserting into role table
+        // </inserting into department table>
+
+        // <inserting into role table>
         ContentValues role1 = new ContentValues();
         role1.put(MySQLiteHelper.KEY_ROLE_NAME, "CUSTOMER CARE");
         role1.put(MySQLiteHelper.KEY_ROLE_MODIFIED_ON, "12:04PM");
@@ -389,9 +393,10 @@ public class SampleDatabaseData {
         role4.put(MySQLiteHelper.KEY_ROLE_MODIFIED_ON, "01:09AM");
         db.insert(MySQLiteHelper.TABLE_ROLE, null, role4);
 
+        // </inserting into role table>
 
-        // inserting into question table
 
+        // <inserting into question table>
         // poor
         ContentValues quest1 = new ContentValues();
         quest1.put(MySQLiteHelper.KEY_QUESTION_ID, 1);
@@ -493,7 +498,7 @@ public class SampleDatabaseData {
         quest15.put(MySQLiteHelper.KEY_QUESTION_CATEGORY, 2);
         db.insert(MySQLiteHelper.TABLE_QUESTION, null, quest15);
 
-
+        // </inserting into question table>
         Log.v("DI", "Data inserted  Successfully !!!!!!!");
     }
 

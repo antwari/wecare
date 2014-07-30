@@ -5,7 +5,7 @@ public class QuestionBusinessRank {
     // fields
     private int id;
     private int questionId;
-    private int businessRankId ;
+    private int businessRankId;
 
     // constructor
     public QuestionBusinessRank(int id, int questionId, int businessRankId) {
